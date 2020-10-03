@@ -23,6 +23,6 @@ class TestCity(unittest.TestCase):
 
     
     def test_can_change_city_visit_to_true(self):
-        self.city.mark_as_visited()
+        self.city_1.mark_as_visited()
         self.assertEqual(True, self.city_1.visited)
     
