@@ -9,4 +9,6 @@ class TestCity(unittest.TestCase):
         self.city_3 = City("Berlin", "Germany")
 
     
-    
+    def test_city_has_name(self):
+        self.assertEqual("Tokyo", self.city_1.name)
+        self.assertEqual("Berlin", self.city_3.name)
