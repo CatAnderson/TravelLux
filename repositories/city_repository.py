@@ -11,3 +11,4 @@ def save(city):
     id = results[0]['id']
     city.id = id
     return city
+
