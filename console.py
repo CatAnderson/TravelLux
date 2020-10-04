@@ -27,6 +27,14 @@ country_repository.save(country5)
 country6 = Country("New Zealand", "Oceania")
 country_repository.save(country6)
 
+# testing update
+country7 = Country("Spain", "Asia")
+country_repository.save(country7)
+print(country_repository.select(country7.id))
+country7.continent = "Europe"
+country_repository.update(country7)
+
+
 # # Japan
 # city1 = City("Osaka", country1)
 # city_repository.save(city1)
