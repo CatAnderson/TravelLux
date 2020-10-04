@@ -26,7 +26,7 @@ def select_all():
         country = (name, continent, country_id)
         countries.append(country)
     return countries
-    
+
 
 def select(id):
     country = None
@@ -42,4 +42,6 @@ def select(id):
     return country
 
 
-
+def delete_all():
+    sql = "DELETE FROM countries"
+    run_sql(sql)
