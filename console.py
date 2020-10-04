@@ -29,7 +29,7 @@ country_repository.save(country5)
 country6 = Country("New Zealand", "Oceania")
 country_repository.save(country6)
 
-# testing update
+# testing update country
 # country7 = Country("Spain", "Asia")
 # country_repository.save(country7)
 # print(country_repository.select(country7.id))
@@ -66,6 +66,13 @@ city_repository.save(city8)
 # New Zealand
 city9 = City("Christchurch", country6)
 city_repository.save(city9)
+
+# testing update city
+# city10 = City("Mexico Ctiy", country6)
+# city_repository.save(city10)
+# print(city_repository.select(city10.id))
+# city10.name = "Mexico City"
+# city_repository.update(city10)
 
 
 pdb.set_trace()
