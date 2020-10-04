@@ -9,6 +9,6 @@ def save(country):
     values = [country.name, country.continent]
     results = run_sql(sql, values)
     id = results[0]['id']
-    city.id = id
+    country.id = id
     return country
 
