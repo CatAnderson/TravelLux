@@ -1,4 +1,4 @@
-class City:
+class Destination:
 
     def __init__(self, name, country, visited = False, id = None):
         self.name = name

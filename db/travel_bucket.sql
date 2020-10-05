@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS cities;
+DROP TABLE IF EXISTS destinations;
 DROP TABLE IF EXISTS countries;
 
 CREATE TABLE countries (
@@ -7,7 +7,7 @@ CREATE TABLE countries (
     continent VARCHAR(255)
 );
 
-CREATE TABLE cities (
+CREATE TABLE destinations (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     country_id INT REFERENCES countries(id),

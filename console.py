@@ -1,13 +1,13 @@
 import pdb
 
-from models.city import City
+from models.destination import Destination
 from models.country import Country
 
-import repositories.city_repository as city_repository
+import repositories.destination_repository as destination_repository
 import repositories.country_repository as country_repository
 
 
-city_repository.delete_all()
+destination_repository.delete_all()
 country_repository.delete_all()
 
 
@@ -38,41 +38,41 @@ country_repository.save(country6)
 
 
 # Japan
-city1 = City("Osaka", country1)
-city_repository.save(city1)
-city2 = City("Tokyo", country1)
-city_repository.save(city2)
+destination1 = Destination("Osaka", country1)
+destination_repository.save(destination1)
+destination2 = Destination("Tokyo", country1)
+destination_repository.save(destination2)
 
 # France
-city3 = City("Paris", country2)
-city_repository.save(city3)
+destination3 = Destination("Paris", country2)
+destination_repository.save(destination3)
 
 # Canada
-city4 = City("Vancover", country3)
-city_repository.save(city4)
-city5 = City("Calgary", country3)
-city_repository.save(city5)
+destination4 = Destination("Vancover", country3)
+destination_repository.save(destination4)
+destination5 = Destination("Calgary", country3)
+destination_repository.save(destination5)
 
 # Mexico
-city6 = City("Guadalajara", country4)
-city_repository.save(city6)
+destination6 = Destination("Guadalajara", country4)
+destination_repository.save(destination6)
 
 # Germany
-city7 = City("Berlin", country5)
-city_repository.save(city7)
-city8 = City("Hamburg", country5)
-city_repository.save(city8)
+destination7 = Destination("Berlin", country5)
+destination_repository.save(destination7)
+destination8 = Destination("Hamburg", country5)
+destination_repository.save(destination8)
 
 # New Zealand
-city9 = City("Christchurch", country6)
-city_repository.save(city9)
+destination9 = Destination("Christchurch", country6)
+destination_repository.save(destination9)
 
 # testing update city
-# city10 = City("Mexico Ctiy", country6)
-# city_repository.save(city10)
-# print(city_repository.select(city10.id))
-# city10.name = "Mexico City"
-# city_repository.update(city10)
+# destination10 = Destination("Mexico Ctiy", country6)
+# destination_repository.save(destination10)
+# print(destination_repository.select(destination10.id))
+# destination10.name = "Mexico City"
+# destination_repository.update(destination10)
 
 
 pdb.set_trace()
