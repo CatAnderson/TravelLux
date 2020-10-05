@@ -2,16 +2,16 @@
 
 {% block content %}
 
-<h1> Choose your City</h1>
+<h1> Choose your Destination</h1>
 
 <form action="/bucketlist" method="post">
     <div>
-        <label for="city">City:</label>
-        <select id="city" name="city" >
-        {% for city in all_cities %}
-            <option value="{{ city.name }}"
-            {% if city.country.id == city.id %}{% endif %}>
-            {{ city.name }}
+        <label for="destination">Destination:</label>
+        <select id="destination" name="destination" >
+        {% for destination in all_destinations %}
+            <option value="{{ destination.name }}"
+            {% if destination.country.id == destination.id %}{% endif %}>
+            {{ destination.name }}
             </option>
         {% endfor %}
         </select>

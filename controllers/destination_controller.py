@@ -28,10 +28,10 @@ def country_selection():
 @destinations_blueprint.route("/destination/new/<id>", methods=['GET'])
 def create_destination(id):
     country = country_repository.select(id)
-    name = request.form['destination']
+    destination_name = request.form['destination']
     country = destination_repository.select(destination.country.id)
     visited = request.form['visited']
-    destination = Destination(name, country, visited)
+    destination = Destination(destination_name, country, visited)
     destination_repository.save(destination)
     return render_template('destination/index.html', country=country, all_destinations=destination)
 
@@ -47,10 +47,10 @@ def edit_destination(id):
 # updates the bucket list page with new city info?
 @destinations_blueprint.route("/destination/<id>", methods=['POST'])
 def update_destination(id):
-    name = request.form['destination']
+    destination_name = request.form['destination']
     visited = request.form['visited']
     counrty = city_repository.select(country_id)
-    destination = Destination(name, counrty, visited, id)
+    destination = Destination(destination_name, counrty, visited, id)
     destination_repository.update(destination)
     return redirect('/bucket_list')
 
