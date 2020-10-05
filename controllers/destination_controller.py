@@ -15,7 +15,7 @@ destinations_blueprint = Blueprint("destinations", __name__)
 def destinations():
     countries = country_repository.select_all()
     destinations = destination_repository.select_all()
-    return render_template("bucket_list/index.html", countries=countries, destinations=destinations)
+    return render_template("bucket-list/index.html", countries=countries, destinations=destinations)
 
 
 # adding a destination - country page
@@ -42,7 +42,7 @@ def create_destination(country_id):
 def edit_destination(id):
     country = country_repository.select(id)
     destinations = destination_repository.select_all()
-    return render_template('bucket_list/edit.html', country=country, destinations=destinations)
+    return render_template('bucket-list/edit.html', country=country, destinations=destinations)
 
 
 # updates the bucket list page with new city info?
@@ -53,7 +53,7 @@ def update_destination(id):
     country = destination_repository.select(country_id)
     destination = Destination(destination_name, country, visited, id)
     destination_repository.update(destination)
-    return redirect('/bucket_list')
+    return redirect('/bucket-list')
 
 
 # delete destination from bucketlist
