@@ -22,6 +22,7 @@ def new_country():
     return render_template("country/new.html", all_countries = countries)
 
 
+
 # CREATE
 # POST '/tasks'
 @countries_blueprint.route("/countries",  methods=['POST'])
@@ -31,3 +32,13 @@ def create_country():
     country = Country(name, continent)
     country_repository.save(country)
     return redirect('/countries')
+
+
+
+# SHOW
+# GET '/tasks/<id>'
+@countries_blueprint.route("/countries/<id>", methods=['GET'])
+def show_country(id):
+    country = country_repository.select(id)
+    return render_template('country/show.html', country=country)
+
