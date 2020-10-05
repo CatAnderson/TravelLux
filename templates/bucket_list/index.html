@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1> This is the bucket list main page</h1>
+
+{% for city in all_cities %}
+  <div class="content">
+      {{task.user.first_name}}
+      <div class="description">
+        <a href="/tasks/{{task.id}}">{{task.description}}</a>
+        <span class="duration">{{task.duration}} mins</span>
+      </div>
+
+{{ all_cities }}
+
+{% endblock %}
