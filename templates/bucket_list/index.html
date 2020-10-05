@@ -2,19 +2,33 @@
 
 {% block content %}
 
-<h1> This is the bucket list main page</h1>
+<main class="destinations">
+    <hgroup>
+        <h1> Planing your next big adventure...</h1>
+        <p>I love cheese, especially cheese and biscuits ricotta. Cottage cheese fondue cheese and biscuits cheese triangles cheese triangles who moved my cheese cheesy feet cheese slices.</p>
+    </hgroup>
 
-{% for destination in all_destinations %}
+    {% for destination in destinations %}
+    <section>
+        <h2>{{ destination.country.name }}</h2>
+        <p>{{ destination.country.continent }}</p>
+        <br>
+        <h3>{{ destination.name }}</h3>
+        <br>
+        <h4>Visited?</h4>
+        {% if destination.visited == True %}
+            &#10004;
+            {% else %}
+            &#10008;
+            {% endif %}
+        <p> {{ destination.visited }} </p>
 
-<section>
-    <h2>{{ destination.country.name }}</h2>
-    <h4> {{ destination.country.continent }} </h4>
-    <h3>{{ destination.name }}</h3>
-    <p> {{ destination.visited }} </p>
-</section>
-{% endfor %}
+        <p><a href="/destination/{{ destination.id }}/edit">edit your trip</a></p>
+        <p><a href="/destination/{{ destination.id }}/delete">delete from your bucket-list</a></p>
+    </section>
+    {% endfor %}
 
-
+</main>
 
 
 {% endblock %}

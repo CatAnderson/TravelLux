@@ -1,20 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<h1> Where would you like to go...?</h1>
-
-{% for country in all_countries %}
 <section class = "form-block">
-    <h4>{{ country.name }}</h4>
-    <p> {{ country.continent }} </p>
-    <form action="/destination/new/{{ country.id }}" method="GET">
-        <input type="submit" value="Add">
-    </form>
-</section>
-{% endfor %}
+    <h1> Where would you like to go...?</h1>
 
-</form>
+    {% for country in all_countries %}
+    <section>
+        <h4>{{ country.name }}</h4>
+        <p> {{ country.continent }} </p>
+        <form action="/destination/new/{{ country.id }}" method="GET">
+            <input type="submit" value="Add">
+        </form>
+    </section>
+    {% endfor %}
+</section>
 
 
 
