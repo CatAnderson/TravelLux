@@ -38,7 +38,7 @@ def select(id):
         name = result['name']
         continent = result['continent']
         country_id = result['id']
-        country = (name, continent, country_id)
+        country = Country(name, continent, country_id)
     return country
 
 

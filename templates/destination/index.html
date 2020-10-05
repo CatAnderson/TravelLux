@@ -8,11 +8,12 @@
     <div>
         <label for="destination">Destination:</label>
         <select id="destination" name="destination" >
-        {% for destination in all_destinations %}
-            <option value="{{ destination.name }}"
-            {% if destination.country.id == destination.id %}{% endif %}>
-            {{ destination.name }}
+        {% for destination in destinations %}
+        {% if country.id == destination.country.id %}
+            <option value="{{ destination.id }}">
+                {{ destination.name }}
             </option>
+        {% endif %}>
         {% endfor %}
         </select>
     </div>

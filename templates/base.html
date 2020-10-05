@@ -3,23 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Travel Bucket List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/counrty/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <title> {{ title }} TravelLux</title>
 </head>
 <body>
     <header>
         <nav>
+            <h1 class="company-logo" >TravelLux</h1>
             <ul>
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('home') }}">Bucket List</a></li>
-                <li><a href="{{ url_for('home') }}">Add Destination</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/bucket-list">Bucket List</a></li>
+                <li><a href="/destination/new/countries">Add Destination</a></li>
             </ul>
         </nav>
     </header>
+    <div class="block-colour"></div>
 
     {% block content %}
     {% endblock content %}
 
+    <div class="block-colour"></div>
     <footer>
         created by Clementine Studios.
     </footer>

@@ -25,15 +25,16 @@ def country_selection():
     return render_template("country/index.html", all_countries = countries)
 
 
-@destinations_blueprint.route("/destination/new/<id>", methods=['GET'])
-def create_destination(id):
-    country = country_repository.select(id)
-    destination_name = request.form['destination']
-    country = destination_repository.select(destination.country.id)
-    visited = request.form['visited']
-    destination = Destination(destination_name, country, visited)
-    destination_repository.save(destination)
-    return render_template('destination/index.html', country=country, all_destinations=destination)
+@destinations_blueprint.route("/destination/new/<country_id>")
+def create_destination(country_id):
+    country = country_repository.select(country_id)
+    destination = destination_repository.select_all()
+    # destination_name = request.form['destination']
+    # country = destination_repository.select(destination.country.id)
+    # visited = request.form['visited']
+    # destination = Destination(destination_name, country, visited)
+    # destination_repository.save(destination)
+    return render_template('destination/index.html', country=country, destinations=destination)
 
 
 # edit your destination plans.
@@ -49,7 +50,7 @@ def edit_destination(id):
 def update_destination(id):
     destination_name = request.form['destination']
     visited = request.form['visited']
-    counrty = city_repository.select(country_id)
+    counrty = destination_repository.select(country_id)
     destination = Destination(destination_name, counrty, visited, id)
     destination_repository.update(destination)
     return redirect('/bucket_list')

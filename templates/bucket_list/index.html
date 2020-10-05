@@ -4,4 +4,17 @@
 
 <h1> This is the bucket list main page</h1>
 
+{% for destination in all_destinations %}
+
+<section>
+    <h2>{{ destination.country.name }}</h2>
+    <h4> {{ destination.country.continent }} </h4>
+    <h3>{{ destination.name }}</h3>
+    <p> {{ destination.visited }} </p>
+</section>
+{% endfor %}
+
+
+
+
 {% endblock %}

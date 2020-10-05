@@ -1,0 +1,44 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    /* text-align: center; */
+    background-color: #cfcb9c;
+    margin: 0;
+    text-align: center;
+    width: 80vw;
+    /* height: 33vw; */
+    justify-content: center;
+    margin: auto;
+}
+
+.block-colour {
+    background-color: #dfba47;
+    height: 30px;
+}
+
+/* welcome page */
+
+.header-img {
+    height: auto;
+    /* max-height: 5%; */
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+.image-block {
+    background-color: #f8afa8;
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.popular-destination-img {
+    height: 250px;
+    width: auto;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+
+

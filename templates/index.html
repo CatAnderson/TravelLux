@@ -4,21 +4,21 @@
 {% block content %}
 
 <div>
-    <img src="https://placebear.com/g/1024/350" alt="">
+    <img class = "header-img" src= "{{ url_for('static', filename='img/pexels-alfonso-escalante-2533092.jpg') }}" alt="">
 </div>
-<section>
+<section class = "image-block">
     <hgroup>
         <h2> Popular countries to visit! </h2>
         <p> I love cheese, especially cheese and biscuits ricotta. Cottage cheese fondue cheese and biscuits cheese triangles cheese triangles who moved my cheese cheesy feet cheese slices.</p>
     </hgroup>
-
-    <img src="https://placebear.com/g/400/200" alt="">
-    <img src="https://placebear.com/g/400/200" alt="">
-    <img src="https://placebear.com/g/400/200" alt="">
-    <img src="https://placebear.com/g/400/200" alt="">
-    <img src="https://placebear.com/g/400/200" alt="">
-    <img src="https://placebear.com/g/400/200" alt="">
-    
+    <div >
+    <img class = "popular-destination-img" src= "{{ url_for('static', filename='img/pexels-bhargava-marripati-3591074.jpg') }}" alt="Chichen Itza, Mexico">
+    <img class = "popular-destination-img" src= "{{ url_for('static', filename='img/pexels-eugene-dorosh-739407.jpg') }}" alt="Paris, France">
+    <img class = "popular-destination-img" src= "{{ url_for('static', filename='img/pexels-pixabay-46253.jpg') }}" alt="Japan">
+    <img class = "popular-destination-img" src= "{{ url_for('static', filename='img/pexels-jaime-reimer-2662116.jpg') }}" alt="Canada">
+    <img class = "popular-destination-img" src= "{{ url_for('static', filename='img/pexels-pixabay-415687.jpg') }}" alt="Germany">
+    <img class = "popular-destination-img" src= "{{ url_for('static', filename='img/pexels-tyler-lastovich-1022479.jpg') }}" alt="New Zealand">
+    </div>
 </section>
 
 {% endblock %}

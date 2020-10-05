@@ -26,7 +26,7 @@ def select_all():
         country_id = country_repository.select(row["country_id"])
         visited = row['visited']
         destination_id = row['id']
-        destination = Destination(name, country_id, visited)
+        destination = Destination(name, country_id, visited, destination_id)
         destinations.append(destination)
     return destinations
 

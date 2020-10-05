@@ -18,7 +18,7 @@ def countries():
 # GET
 @countries_blueprint.route("/countries/new", methods=['GET'])
 def new_country():
-    countries = ountry_repository.select_all()
+    countries = country_repository.select_all()
     return render_template("country/new.html", all_countries = countries)
 
 
@@ -60,7 +60,7 @@ def update_country(id):
 
 
 # DELETE
-@tasks_blueprint.route("/countries/<id>/delete", methods=['POST'])
+@countries_blueprint.route("/countries/<id>/delete", methods=['POST'])
 def delete_counrty(id):
     country_repository.delete(id)
     return redirect('/counrties')

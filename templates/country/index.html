@@ -5,15 +5,21 @@
 <h1> Where would you like to go...?</h1>
 
 {% for country in all_countries %}
-<section>
-    <!-- <p> {{ country.name }} </p> -->
-    <a href=" {{ country.name }}/<country.id>"> {{ country.name }}</a>
+<section class = "form-block">
+    <h4>{{ country.name }}</h4>
     <p> {{ country.continent }} </p>
-    <button>add</button>
+    <form action="/destination/new/{{ country.id }}" method="GET">
+        <input type="submit" value="Add">
+    </form>
 </section>
 {% endfor %}
 
-<!-- <form action="/bucket-list/add-destination" method='POST'>
+</form>
+
+
+
+
+<!-- <form action="/destination/new/countries" method='POST'>
     <div>
         <label for="country">Country:</label>
         <input type="text" id="country" name="country" placeholder="Country Name" required autofocus>
@@ -24,7 +30,7 @@
         <button type="submit">Add Country</button>
 
     </div> -->
-</form>
+
 
 
 
