@@ -23,7 +23,7 @@ def select_all():
         name = row['name']
         continent = row['continent']
         country_id = row['id']
-        country = (name, continent, country_id)
+        country = Country(name, continent, country_id)
         countries.append(country)
     return countries
 

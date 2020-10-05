@@ -2,8 +2,31 @@
 
 {% block content %}
 
-<h1> This is the country main page</h1>
+<h1> Where would you like to go...?</h1>
 
-{{ all_countries }}
+{% for country in all_countries %}
+<section>
+    <!-- <p> {{ country.name }} </p> -->
+    <a href=" {{ country.name }}/<country.id>"> {{ country.name }}</a>
+    <p> {{ country.continent }} </p>
+    <button>add</button>
+</section>
+{% endfor %}
+
+<!-- <form action="/bucket-list/add-destination" method='POST'>
+    <div>
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" placeholder="Country Name" required autofocus>
+        
+        <label for="continet">Continent:</label>
+        <input type="text" id="continent" name="continent" placeholder="Country Name" required autofocus>
+
+        <button type="submit">Add Country</button>
+
+    </div> -->
+</form>
+
+
+
 
 {% endblock %}
