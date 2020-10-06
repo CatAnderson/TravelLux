@@ -79,5 +79,8 @@ destination_repository.save(destination9)
 bucketlist1 = Bucketlist(destination2)
 bucketlist_repository.save(bucketlist1)
 
+bucketlist2 = Bucketlist(destination7)
+bucketlist_repository.save(bucketlist2)
+
 
 pdb.set_trace()

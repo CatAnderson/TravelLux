@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h1> Choose your Destination</h1>
+<h1> Choose your destination for {{ country.name }}</h1>
 
 <form action="/bucketlist", method="POST">
     <div>
@@ -18,8 +18,8 @@
         {% endfor %}
         </select>
         <br>
-        <label for="country">Country:</label> 
-        <input type="text" name="country" id="country" value="{{ country.id }}"placeholder="{{ country.name }}" readonly></input>
+        <label for="country" hidden>Country:</label> 
+        <input type="text" name="country" id="country" value="{{ country.id }}" hidden readonly></input>
     </div>
 
     <div>

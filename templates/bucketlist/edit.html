@@ -2,6 +2,37 @@
 
 {% block content %}
 
-<h1> This page will let you edit your destination plans.</h1>
+<h1> you want to edit your planes for {{ country.name }}</h1>
+
+<!-- <form action="/bucketlist", method="POST">
+    <div>
+        <label for="destination">Destination:</label>
+        <select id="destination" name="destination" >
+        {% for destination in destinations %}
+        {% if country.id == destination.country.id %}
+            <option value="{{ destination.id }}" selected>
+                {{ destination.name }}
+            </option>
+        
+        {% endif %}>
+        {% endfor %}
+        </select>
+        <br>
+        <label for="country" hidden>Country:</label> 
+        <input type="text" name="country" id="country" value="{{ country.id }}" hidden readonly></input>
+    </div>
+
+    <div>
+        <label for="visited">Visited:</label>
+        <select id="visited" name="visited">
+            <option value="false">False</option>
+             <option value="true">True</option>
+        </select>
+    </div>
+
+
+    <button type="submit">Add Destination</button>
+
+</form> -->
 
 {% endblock %}

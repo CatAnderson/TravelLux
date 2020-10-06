@@ -49,11 +49,11 @@ def create_destination():
     return redirect("/bucketlist")
 
 # edit your destination plans.
-@destinations_blueprint.route("/destination/<id>/edit", methods=['GET'])
-def edit_destination(id):
-    country = country_repository.select(id)
-    destinations = destination_repository.select_all()
-    return render_template('bucketlist/edit.html', country=country, destinations=destinations)
+# @destinations_blueprint.route("/destination/<id>/edit", methods=['GET'])
+# def edit_destination(id):
+#     country = country_repository.select(id)
+#     destinations = destination_repository.select_all()
+#     return render_template('bucketlist/edit.html', country=country, destinations=destinations)
 
 
 # updates the bucket list page with new city info?
@@ -68,7 +68,7 @@ def update_destination(id):
 
 
 # delete destination from bucketlist
-@destinations_blueprint.route("/destination/<destination_id>/delete", methods=['POST'])
-def delete_destination(id):
-    destination_repository.delete(id)
-    return redirect('/bucket-list') 
+# @destinations_blueprint.route("/destination/<destination_id>/delete", methods=['POST'])
+# def delete_destination(id):
+#     destination_repository.delete(id)
+#     return redirect('/bucketlist') 

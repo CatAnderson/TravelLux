@@ -6,6 +6,8 @@
     <hgroup>
         <h1> Planing your next big adventure...</h1>
         <p>I love cheese, especially cheese and biscuits ricotta. Cottage cheese fondue cheese and biscuits cheese triangles cheese triangles who moved my cheese cheesy feet cheese slices.</p>
+        <br>
+        <p class="add-button"><a href="destination/new/countries">add destination</a></p>
     </hgroup>
 
     {% for bucketlist in bucketlists %}
@@ -22,10 +24,12 @@
             &#10008;
             {% endif %}
         <div>
+        <form class="delete-button" action="/bucketlist/{{ bucketlist.id }}/delete" method="POST">
+            <input type="submit" value= delete >
+         </form>
+         <br>
+         <br>
             <p class="edit-button"><a href="/destination/{{ bucketlist.destination.id }}/edit">edit trip</a></p>
-            <br>
-            <br>
-            <p class="delete-button"><a href="/destination/{{ bucketlist.destination.id }}/delete">delete trip</a></p>
         </div>
     </section>
     {% endfor %}

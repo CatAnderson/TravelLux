@@ -51,3 +51,14 @@
     border-radius: 10px;
     margin: auto;
 }
+
+.add-button {
+    display: block;
+    background-color: #cfcb9c;
+    color: #ffffff;
+    width: 200px;
+    height: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+}
