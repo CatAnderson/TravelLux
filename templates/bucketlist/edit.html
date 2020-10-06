@@ -2,24 +2,19 @@
 
 {% block content %}
 
-<h1> you want to edit your plans for {{ country.name }}</h1>
+<h1> you want to edit your plans for {{ destination.name }}</h1>
 
-<form action="/bucketlist", method='POST'>
+<form action="/destination/{{ destination.id }}", method="POST">
     <div>
         <label for="destination">Destination:</label>
-        <select id="destination" name="destination" >
-        {% for destination in destinations %}
-        {% if country.id == destination.country.id %}
+        <select id="destination" name="destination" disabled>
             <option value="{{ destination.id }}">
                 {{ destination.name }}
             </option>
-        
-        {% endif %}>
-        {% endfor %}
         </select>
         <br>
         <label for="country" hidden>Country:</label> 
-        <input type="text" name="country" id="country" value="{{ country.id }}" hidden readonly></input>
+        <input type="text" name="country" id="country" value="{{ destination.country.name }}" hidden readonly></input>
     </div>
 
     <div>

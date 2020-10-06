@@ -3,15 +3,19 @@ body {
     text-align: center;
     background-color: #cfcb9c;
     margin: 0px;
-    height: 100vh;
-    width: 100vw;
+    padding: 0px;
     justify-content: center;
     color: #ffffff;
 }
+/* body > main {
+    height: 100vh;
+    width: 100vw;
+} */
 
 .block-colour {
     background-color: #dfba47;
     height: 30px;
+    margin-top: 0px;
 }
 
 /* welcome page */

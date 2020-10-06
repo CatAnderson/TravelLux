@@ -11,7 +11,9 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/country/style.css') }}">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bucket-list/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bucketlist/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bucketlist/edit.css') }}">
+    
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
@@ -22,17 +24,17 @@
         <nav>
             <h1 class="company-logo" >TravelLux</h1>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/bucketlist">Bucket List</a></li>
-                <li><a href="/destination/new/countries">Add Destination</a></li>
+                <li><a class="hover-over" href="/">Home</a></li>
+                <li><a class="hover-over" href="/bucketlist">Bucket List</a></li>
+                <li><a class="hover-over" href="/destination/new/countries">Add Destination</a></li>
             </ul>
         </nav>
+        <div class="block-colour"></div>
     </header>
-    <div class="block-colour"></div>
-
-    {% block content %}
-    {% endblock content %}
-
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
     <!-- <div class="block-colour"></div> -->
     <footer>
         created by Clementine Studios.

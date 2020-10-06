@@ -4,7 +4,7 @@
 
 <main class="main-bucket-list-body">
     <hgroup>
-        <h1> Planing your next big adventure...</h1>
+        <h1> Plan your next big adventure...</h1>
         <p>I love cheese, especially cheese and biscuits ricotta. Cottage cheese fondue cheese and biscuits cheese triangles cheese triangles who moved my cheese cheesy feet cheese slices.</p>
         <br>
         <p class="add-button"><a href="destination/new/countries">add destination</a></p>
@@ -29,7 +29,7 @@
          </form>
          <br>
          <br>
-            <p class="edit-button"><a href="/bucketlist/{{ bucketlist.id }}/edit" method="POST">edit trip</a></p>
+            <p class="edit-button"><a href="/destination/{{ bucketlist.destination.id }}/edit">edit trip</a></p>
         </div>
     </section>
     {% endfor %}
