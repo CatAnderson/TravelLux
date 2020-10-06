@@ -1,0 +1,49 @@
+.pick-city{
+    background-color: #f8afa8;
+    width: 100vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    margin: auto;
+}
+
+.city-form {
+    display: block;
+    background-color: #f5cdb4;
+    /* box-shadow: 5px 5px 15px 5px #d89a95; */
+    color: #363636;
+    padding: 35px;
+    vertical-align: middle;
+    align-items: center;
+    height: 80vh;
+    width: 50%;
+    line-height: 50pt;
+    margin: auto;
+}
+
+.large-img{
+    height: 100vh;
+    width: 50vw;
+}
+
+.add-button-2 {
+    display: block;
+    background-color: #8cbea3;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 5px;
+
+    width: 200px;
+    height: 5px;
+
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    margin: auto;
+
+    font-size: 14pt;
+    font-weight: 400;  
+}

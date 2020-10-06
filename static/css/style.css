@@ -1,7 +1,6 @@
 body {
     font-family: "Montserrat", sans-serif;
     text-align: center;
-    background-color: #cfcb9c;
     margin: 0px;
     padding: 0px;
     justify-content: center;
@@ -24,7 +23,7 @@ body {
     height: auto;
     /* max-height: 5%; */
     max-width: 100%;
-    opacity: 0.8;
+    /* opacity: 0.8; */
 }
 
 .image-block {
@@ -32,15 +31,27 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    margin: 0px;
+    padding-bottom: 30px;
 
 }
 
 .popular-destination-img {
+    /* flex: 1 0 40%; */
     height: 250px;
-    width: auto;
+    width: 25%;
     border-radius: 100%;
     margin: 20px;
 }
 
+.curved{
+    background-clip: border-box;
+    position: relative;
+    /* bottom: 0px; */
+    /* justify-content: baseline; */
+    width: 100%;
+    /* overflow: hidden; */
+    z-index: 5;
+}
 
 

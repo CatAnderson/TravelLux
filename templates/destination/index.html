@@ -1,38 +1,41 @@
 {% extends "base.html" %}
 
 {% block content %}
+<main class="pick-city">
+    <section class="city-form">
+        <h1> Choose your destination for {{ country.name }}</h1>
 
-<h1> Choose your destination for {{ country.name }}</h1>
+        <form action="/bucketlist", method="POST">
+            <div>
+                <label for="destination">Destination:</label>
+                <select id="destination" name="destination" >
+                {% for destination in destinations %}
+                {% if country.id == destination.country.id %}
+                    <option value="{{ destination.id }}">
+                        {{ destination.name }}
+                    </option>
+                
+                {% endif %}>
+                {% endfor %}
+                </select>
+                <br>
+                <label for="country" hidden>Country:</label> 
+                <input type="text" name="country" id="country" value="{{ country.id }}" hidden readonly></input>
+            </div>
 
-<form action="/bucketlist", method="POST">
+            <div>
+                <label for="visited">Visited:</label>
+                <select id="visited" name="visited">
+                    <option value="false">False</option>
+                    <option value="true">True</option>
+                </select>
+            </div>
+
+            <button class="add-button-2" type="submit">Add Destination</button>
+        </form>
+    </section>
     <div>
-        <label for="destination">Destination:</label>
-        <select id="destination" name="destination" >
-        {% for destination in destinations %}
-        {% if country.id == destination.country.id %}
-            <option value="{{ destination.id }}">
-                {{ destination.name }}
-            </option>
-        
-        {% endif %}>
-        {% endfor %}
-        </select>
-        <br>
-        <label for="country" hidden>Country:</label> 
-        <input type="text" name="country" id="country" value="{{ country.id }}" hidden readonly></input>
+        <img class="large-img" src="{{ url_for('static', filename='img/pexels-element-digital-1051075.jpg') }}" alt="">
     </div>
-
-    <div>
-        <label for="visited">Visited:</label>
-        <select id="visited" name="visited">
-            <option value="false">False</option>
-             <option value="true">True</option>
-        </select>
-    </div>
-
-
-    <button type="submit">Add Destination</button>
-
-</form>
-
+</main>
 {% endblock %}

@@ -1,70 +1,110 @@
-.main-bucket-list-body {
+.bucket-list-body {
     background-color: #f8afa8;
     width: 100vw;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    /* align-items: center; */
     margin: auto;
 }
-
-/* .main-bucket-list-body > hgroup {
-    
-} */
+.bucket-list-body > hgroup {
+    padding-top: 40px;
+    margin: 0 20%;
+}
+.bucket-list-body > hgroup > h1 {
+    font-family: 'Montez', cursive;
+    font-size: 60pt;
+}
 
 .destination-list {
     display: block;
     background-color: #f5cdb4;
     box-shadow: 5px 5px 15px 5px #d89a95;
-    color: #ffffff;
-    /* padding: 35px; */
-    margin: 10px;
+    color: #363636;
+    margin: 40px 10px;
     align-items: center;
     height: 450px;
     width: 350px;
     line-height: 4pt;
-    /* opacity: 0.5; */
 }
 
 .destination-list > div {
     margin-top: 20px;
-
 }
-    
+
+.destination-img{
+    width: 350px;
+    height: 150px;
+}
+
+
+/* buttons */
 .edit-button {
     display: block;
     background-color: #8cbea3;
+
     width: 100px;
     height: 5px;
+
     padding: 20px;
     border-radius: 10px;
     margin: auto;
+
     text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 5px;
+
+    font-size: 14pt;
+    font-weight: 400;
+}
+
+.edit-button > a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .delete-button {
     background-color: #ff7f4c;
-    border: 0px;
     color: #ffffff;
+
+    height: 5px;
+    width: 140px;
+
+    border: 0px;
     padding: 20px;
+    border-radius: 10px;
+
     text-align: center;
+    vertical-align: middle;
+    line-height: 5px;
     text-decoration: none;
+
+    font-family: "Montserrat";
     font-size: 14pt;
     font-weight: 400;
-    width: 150px;
-    height: 5px;
-    border-radius: 10px;
-    margin: 0 auto;
 }
 
 .add-button {
     display: block;
-    background-color: #cfcb9c;
+    background-color: #dfba47;
     color: #ffffff;
+
+    text-align: center;
+    vertical-align: middle;
+    line-height: 8px;
+
     width: 200px;
-    height: 5px;
+    height: 8px;
     padding: 20px;
     border-radius: 10px;
+    border: none;
     margin: auto;
+
+    font-size: 14pt;
+    font-weight: 400;  
+}
+
+.add-button > a {
     text-decoration: none;
+    color: #ffffff;
 }

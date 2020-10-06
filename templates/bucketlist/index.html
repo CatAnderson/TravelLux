@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<main class="main-bucket-list-body">
+<main class="bucket-list-body">
     <hgroup>
         <h1> Plan your next big adventure...</h1>
         <p>I love cheese, especially cheese and biscuits ricotta. Cottage cheese fondue cheese and biscuits cheese triangles cheese triangles who moved my cheese cheesy feet cheese slices.</p>
@@ -12,24 +12,24 @@
 
     {% for bucketlist in bucketlists %}
     <section class="destination-list">
-        <img src="https://placebear.com/g/350/150" alt="">
+        <img class="destination-img" src= "{{ url_for('static', filename='img/pexels-rakicevic-nenad-1262304.jpg') }}" alt="">
         <h2>{{ bucketlist.destination.country.name }}</h2>
         <p>{{ bucketlist.destination.country.continent }}</p>
         <br>
         <h3>{{ bucketlist.destination.name }}</h3>
-        <h4>Visited?</h4>
+        <h4 class="visited">Visited?</h4>
         {% if bucketlist.destination.visited == True %}
             &#10004;
             {% else %}
             &#10008;
             {% endif %}
         <div>
-        <form  action="/bucketlist/{{ bucketlist.id }}/delete" method="POST">
-            <input class="delete-button" type="submit" value= delete >
-         </form>
-         <br>
-         <br>
-            <p class="edit-button"><a href="/destination/{{ bucketlist.destination.id }}/edit">edit trip</a></p>
+            <form  action="/bucketlist/{{ bucketlist.id }}/delete" method="POST">
+                <input class="delete-button" type="submit" value= delete >
+            </form>
+            <br>
+            <br>
+                <p class="edit-button"><a href="/destination/{{ bucketlist.destination.id }}/edit">edit trip</a></p>
         </div>
     </section>
     {% endfor %}

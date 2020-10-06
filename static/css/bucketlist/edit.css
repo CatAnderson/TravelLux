@@ -1,0 +1,25 @@
+.country-edit {
+    background-color: #f8afa8;
+    width: 100vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    margin: auto;
+}
+
+.edit-form {
+    display: block;
+    background-color: #f5cdb4;
+    color: #363636;
+
+    padding: 35px;
+    vertical-align: middle;
+    align-items: center;
+    margin: auto;
+
+    height: 80vh;
+    width: 50%;
+    line-height: 50pt;
+    
+}

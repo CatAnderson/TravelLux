@@ -1,0 +1,19 @@
+.country-body {
+    background-color: #cfcb9c;
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.country-list {
+    display: block;
+    background-color: #dfba47;
+    box-shadow: 5px 5px 15px 5px #b3af85;
+    color: #ffffff;
+    margin: 10px;
+    height: 150px;
+    width: 150px;
+    line-height: 4pt;
+}

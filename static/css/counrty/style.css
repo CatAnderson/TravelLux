@@ -1,8 +1,0 @@
-.form-block {
-    background-color: #f8afa8;
-    width: 80vw;
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    align-items: center;
-    margin: auto;
-}
