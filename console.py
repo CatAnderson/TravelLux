@@ -2,11 +2,13 @@ import pdb
 
 from models.destination import Destination
 from models.country import Country
+from models.bucketlist import Bucketlist
 
 import repositories.destination_repository as destination_repository
 import repositories.country_repository as country_repository
+import repositories.bucketlist_repository as bucketlist_repository
 
-
+bucketlist_repository.delete_all()
 destination_repository.delete_all()
 country_repository.delete_all()
 
@@ -73,6 +75,9 @@ destination_repository.save(destination9)
 # print(destination_repository.select(destination10.id))
 # destination10.name = "Mexico City"
 # destination_repository.update(destination10)
+
+bucketlist1 = Bucketlist(destination2)
+bucketlist_repository.save(bucketlist1)
 
 
 pdb.set_trace()

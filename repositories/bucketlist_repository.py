@@ -23,16 +23,15 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        destination_id = destination_repository.id
-        bucketlist_id = row["id"]
-        bucketlist = Bucketlist(destination_id, bucketlist_id)
+        destination_id = destination_repository.select(row["destination_id"])
+        bucketlist = Bucketlist(destination_id, row["id"])
         bucketlists.append(bucketlist)
     return bucketlists
 
 
 def select(id):
     bucketlist = None
-    sql = "SELECT * FROM buckelist WHERE id = %s"
+    sql = "SELECT * FROM bucketlists WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
 
@@ -51,5 +50,11 @@ def delete_all():
 def delete(id):
     sql = "DELETE FROM bucketlists WHERE id = %s"
     values = [id]
+    run_sql(sql, values)
+
+
+def update(bucketlist):
+    sql = "UPDATE bucketlist SET (destination_id) = (%s) WHERE id = %s"
+    values = [bucketlist.destination.id]
     run_sql(sql, values)
 

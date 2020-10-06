@@ -42,7 +42,7 @@ def select(id):
         country_id = country_repository.select(result["country_id"])
         visited = result['visited']
         destination_id = result['id']
-        destination = Destination(name, country_id, visited, city_id)
+        destination = Destination(name, country_id, visited, destination_id)
     return destination
 
 
@@ -60,3 +60,4 @@ def update(destination):
     sql = "UPDATE destination SET (name, country_id, visited) = (%s, %s, %s) WHERE id = %s"
     values = [destination.name, destination.country.id, destination.visited, destination.id]
     run_sql(sql, values)
+    
