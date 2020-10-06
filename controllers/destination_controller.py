@@ -57,7 +57,7 @@ def update_destination(id):
 
 
 # delete destination from bucketlist
-@destinations_blueprint.route("/destination/<id>/delete", methods=['POST'])
+@destinations_blueprint.route("/destination/<destination_id>/delete", methods=['POST'])
 def delete_destination(id):
     destination_repository.delete(id)
     return redirect('/bucket-list') 

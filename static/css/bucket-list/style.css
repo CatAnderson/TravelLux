@@ -1,8 +1,53 @@
-.destinations {
+.main-bucket-list-body {
     background-color: #f8afa8;
-    width: 80vw;
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    /* align-items: center; */
+    margin: auto;
+}
+
+/* .main-bucket-list-body > hgroup {
+    
+} */
+
+.destination-list {
+    display: block;
+    background-color: #f5cdb4;
+    box-shadow: 5px 5px 15px 5px #d89a95;
+    color: #ffffff;
+    /* padding: 35px; */
+    margin: 10px;
     align-items: center;
+    height: 450px;
+    width: 350px;
+    line-height: 4pt;
+    /* opacity: 0.5; */
+}
+
+.destination-list > div {
+    margin-top: 20px;
+
+}
+    
+.edit-button {
+    display: block;
+    background-color: #8cbea3;
+    width: 100px;
+    height: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.delete-button {
+    display: block;
+    background-color: #ff7f4c;
+    color: #ffffff;
+    width: 100px;
+    height: 5px;
+    padding: 20px;
+    border-radius: 10px;
     margin: auto;
 }
