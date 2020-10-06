@@ -15,6 +15,7 @@ def save(bucketlist):
     bucketlist.id = id
     return bucketlist
 
+
 def select_all():
     bucketlists = []
 
@@ -27,5 +28,19 @@ def select_all():
         bucketlist = Bucketlist(destination_id, bucketlist_id)
         bucketlists.append(bucketlist)
     return bucketlists
+
+
+def select(id):
+    bucketlist = None
+    sql = "SELECT * FROM buckelist WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        destination_id = destination_repository.select(result['destination_id'])
+        bucketlist_id = result["id"]
+        bucketlist = Bucketlist(destination_id, bucketlist_id)
+    return bucketlist
+
 
 
