@@ -2,15 +2,15 @@
 
 {% block content %}
 
-<h1> you want to edit your planes for {{ country.name }}</h1>
+<h1> you want to edit your plans for {{ country.name }}</h1>
 
-<!-- <form action="/bucketlist", method="POST">
+<form action="/bucketlist", method='POST'>
     <div>
         <label for="destination">Destination:</label>
         <select id="destination" name="destination" >
         {% for destination in destinations %}
         {% if country.id == destination.country.id %}
-            <option value="{{ destination.id }}" selected>
+            <option value="{{ destination.id }}">
                 {{ destination.name }}
             </option>
         
@@ -31,8 +31,8 @@
     </div>
 
 
-    <button type="submit">Add Destination</button>
+    <button type="submit">edit destination</button>
 
-</form> -->
+</form>
 
 {% endblock %}

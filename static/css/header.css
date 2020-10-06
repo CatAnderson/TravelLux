@@ -3,6 +3,7 @@ body > header {
     color: #ffffff;
     text-align: center;
     height: 20vh;
+    margin-top: 0px;
 }
 
 body > header > nav > ul{

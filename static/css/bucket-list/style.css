@@ -39,17 +39,22 @@
     padding: 20px;
     border-radius: 10px;
     margin: auto;
+    text-decoration: none;
 }
 
 .delete-button {
-    display: block;
     background-color: #ff7f4c;
+    border: 0px;
     color: #ffffff;
-    width: 100px;
-    height: 5px;
     padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14pt;
+    font-weight: 400;
+    width: 150px;
+    height: 5px;
     border-radius: 10px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .add-button {
@@ -61,4 +66,5 @@
     padding: 20px;
     border-radius: 10px;
     margin: auto;
+    text-decoration: none;
 }

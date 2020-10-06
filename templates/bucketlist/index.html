@@ -24,12 +24,12 @@
             &#10008;
             {% endif %}
         <div>
-        <form class="delete-button" action="/bucketlist/{{ bucketlist.id }}/delete" method="POST">
-            <input type="submit" value= delete >
+        <form  action="/bucketlist/{{ bucketlist.id }}/delete" method="POST">
+            <input class="delete-button" type="submit" value= delete >
          </form>
          <br>
          <br>
-            <p class="edit-button"><a href="/destination/{{ bucketlist.destination.id }}/edit">edit trip</a></p>
+            <p class="edit-button"><a href="/bucketlist/{{ bucketlist.id }}/edit" method="POST">edit trip</a></p>
         </div>
     </section>
     {% endfor %}
