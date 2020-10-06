@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS bucklists
 DROP TABLE IF EXISTS destinations;
 DROP TABLE IF EXISTS countries;
 
@@ -14,3 +15,7 @@ CREATE TABLE destinations (
     visited BOOLEAN
 )
 
+CREATE TABLE bucklists (
+    id SERIAL PRIMARY KEY,
+    destination_id INT REFERENCES destinations(id)
+)
