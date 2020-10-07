@@ -6,9 +6,9 @@
         <h1> Choose your destination for {{ country.name }}</h1>
 
         <form action="/bucketlist", method="POST">
-            <div>
+            <div class="destination-block">
                 <label for="destination">Destination:</label>
-                <select id="destination" name="destination" >
+                <select class="dropdown-menu" id="destination" name="destination" >
                 {% for destination in destinations %}
                 {% if country.id == destination.country.id %}
                     <option value="{{ destination.id }}">
@@ -22,10 +22,10 @@
                 <label for="country" hidden>Country:</label> 
                 <input type="text" name="country" id="country" value="{{ country.id }}" hidden readonly></input>
             </div>
-
-            <div>
+            <br>
+            <div class="visited-block">
                 <label for="visited">Visited:</label>
-                <select id="visited" name="visited">
+                <select class="dropdown-menu" id="visited" name="visited">
                     <option value="false">False</option>
                     <option value="true">True</option>
                 </select>

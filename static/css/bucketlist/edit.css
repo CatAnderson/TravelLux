@@ -1,16 +1,22 @@
 .country-edit {
     background-color: #f8afa8;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
-    align-items: center;
-    margin: auto;
+    /* align-items: center; */
+    /* margin: auto; */
+}
+
+.large-img-2 {
+    height: 100vh;
+    width: 50vw;
+
 }
 
 .edit-form {
     display: block;
-    background-color: #f5cdb4;
+    /* background-color: #f5cdb4; */
     color: #363636;
 
     padding: 35px;
@@ -27,14 +33,28 @@
     font-family: 'Montez', cursive;
     font-size: 60pt;
     line-height: 80pt;
+    padding-top: 20px;
 }
+
+.destination-block > label > select > option {
+    font-weight: 600;
+    font-size: 16pt;
+    padding: 20px;
+    color: #000000;
+}
+
+.disabled-input{
+    font-size: 16pt;
+    background-color: #f8afa8;
+}
+
 .visited-block > label {
     font-weight: 600;
     font-size: 16pt;
     padding: 20px;
 }
 
-.visited-dropdown {
+.dropdown-menu {
     display: inline-block;
 	font-size: 12px;
 	font-family: sans-serif;
@@ -45,7 +65,7 @@
 	width: 100%;
 	max-width: 100%;
 	box-sizing: border-box;
-	margin: 0;
+	margin: auto;
 	border: 1px solid #aaa;
 	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
 	border-radius: .5em;

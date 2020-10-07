@@ -4,14 +4,14 @@
 <main class="country-edit">
 
     <div>
-        <img class="large-img" src="{{ url_for('static', filename='img/pexels-nappy-1058957.jpg') }}" alt="">
+        <img class="large-img-2" src="{{ url_for('static', filename='img/pexels-nappy-1058957.jpg') }}" alt="">
     </div>
     <section class="edit-form">
         <h1> you want to edit your plans for {{ destination.name }}</h1>
         <form action="/destination/{{ destination.id }}", method="POST">
-        <div>
+        <div class="destination-block">
             <label for="destination">Destination:</label>
-            <select id="destination" name="destination" disabled>
+            <select class="disabled-input" id="destination" name="destination" disabled>
                 <option value="{{ destination.id }}">
                     {{ destination.name }}
                 </option>
@@ -20,10 +20,10 @@
             <label for="country" hidden>Country:</label> 
             <input type="text" name="country" id="country" value="{{ destination.country.name }}" hidden readonly></input>
         </div>
-    
+        <br>
         <div class="visited-block">
             <label for="visited">Visited:</label>
-            <select class="visited-dropdown" id="visited" name="visited">
+            <select class="dropdown-menu" id="visited" name="visited">
                 <option value="false">False</option>
                 <option value="true">True</option>
             </select>

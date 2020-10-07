@@ -1,7 +1,7 @@
 .pick-city{
-    background-color: #f8afa8;
+    background-color: #cfcb9c;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
     /* align-items: center; */
@@ -10,7 +10,7 @@
 
 .city-form {
     display: block;
-    background-color: #f5cdb4;
+    /* background-color: #f5cdb4; */
     /* box-shadow: 5px 5px 15px 5px #d89a95; */
     color: #363636;
     padding: 35px;
@@ -18,8 +18,21 @@
     align-items: center;
     height: 80vh;
     width: 50%;
-    line-height: 50pt;
+    line-height: 30pt;
     margin: auto;
+}
+
+.city-form > h1 {
+    font-family: 'Montez', cursive;
+    font-size: 60pt;
+    line-height: 80pt;
+    padding-top: 40px;
+}
+
+.destination-block > label {
+    font-weight: 600;
+    font-size: 16pt;
+    padding: 20px;
 }
 
 .large-img{
@@ -42,7 +55,7 @@
     padding: 20px;
     border-radius: 10px;
     border: none;
-    margin: auto;
+    margin: 20px auto;
 
     font-size: 14pt;
     font-weight: 400;  
