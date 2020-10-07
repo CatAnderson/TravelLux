@@ -54,20 +54,30 @@ destination4 = Destination("Vancover", country3)
 destination_repository.save(destination4)
 destination5 = Destination("Calgary", country3)
 destination_repository.save(destination5)
+destination11 = Destination("Toronto", country3)
+destination_repository.save(destination11)
 
 # Mexico
 destination6 = Destination("Guadalajara", country4)
 destination_repository.save(destination6)
+destination13 = Destination("Mexico City", country4)
+destination_repository.save(destination13)
 
 # Germany
 destination7 = Destination("Berlin", country5)
 destination_repository.save(destination7)
 destination8 = Destination("Hamburg", country5)
 destination_repository.save(destination8)
+destination12 = Destination("Leipzig", country5)
+destination_repository.save(destination12)
 
 # New Zealand
 destination9 = Destination("Christchurch", country6)
 destination_repository.save(destination9)
+destination14 = Destination("Auckland", country6)
+destination_repository.save(destination14)
+destination15 = Destination("Hamilton", country6)
+destination_repository.save(destination15)
 
 # testing update city
 # destination10 = Destination("Mexico Ctiy", country6)
