@@ -1,19 +1,62 @@
 .country-body {
     background-color: #cfcb9c;
     width: 100vw;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    /* align-items: center;
+    justify-content: center; */
+    justify-items: center;
     margin: auto;
+}
+
+.country-body > h1 {
+    grid-column:  1 / -1;
+    font-family: 'Montez', cursive;
+    font-size: 60pt;
 }
 
 .country-list {
     display: block;
     background-color: #dfba47;
     box-shadow: 5px 5px 15px 5px #b3af85;
-    color: #ffffff;
-    margin: 10px;
-    height: 150px;
-    width: 150px;
-    line-height: 4pt;
+    background-image: url(../../img/pexels-madison-inouye-1831271.jpg);
+    background-size: 600px 400px;
+    color: #363636;
+
+    margin: 20px;
+    height: 35vh;
+    width: 30vw;
+
+}
+
+/* .country-list:hover {
+    opacity: 0.6;
+} */
+
+.country-list > hgroup {
+    margin-top: 129px;
+    line-height: 10pt;
+}
+
+.add-button-3 {
+    background-color: #f8afa8;
+    color: #363636;
+
+    height: 5px;
+    width: 140px;
+
+    border: 0px;
+    padding: 20px;
+    border-radius: 10px;
+
+    text-align: center;
+    vertical-align: middle;
+    line-height: 5px;
+    text-decoration: none;
+
+    font-family: "Montserrat";
+    font-size: 14pt;
+    font-weight: 400;
 }

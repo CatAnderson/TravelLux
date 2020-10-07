@@ -2,9 +2,13 @@
 
 {% block content %}
 <main class="country-edit">
-    <h1> you want to edit your plans for {{ destination.name }}</h1>
 
-    <form action="/destination/{{ destination.id }}", method="POST">
+    <div>
+        <img class="large-img" src="{{ url_for('static', filename='img/pexels-nappy-1058957.jpg') }}" alt="">
+    </div>
+    <section class="edit-form">
+        <h1> you want to edit your plans for {{ destination.name }}</h1>
+        <form action="/destination/{{ destination.id }}", method="POST">
         <div>
             <label for="destination">Destination:</label>
             <select id="destination" name="destination" disabled>
@@ -16,18 +20,16 @@
             <label for="country" hidden>Country:</label> 
             <input type="text" name="country" id="country" value="{{ destination.country.name }}" hidden readonly></input>
         </div>
-
-        <div>
+    
+        <div class="visited-block">
             <label for="visited">Visited:</label>
-            <select id="visited" name="visited">
+            <select class="visited-dropdown" id="visited" name="visited">
                 <option value="false">False</option>
                 <option value="true">True</option>
             </select>
         </div>
-
-
-        <button type="submit">edit destination</button>
-
-    </form>
+            <button class="edit-button-2" type="submit">edit destination</button>
+        </form>
+    </section>
 </main>
 {% endblock %}

@@ -1,19 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 <main class="country-body">
-<section>
-    <h1> Where would you like to go...?</h1>
+
+    <h1> where would you like to go...?</h1>
 
     {% for country in all_countries %}
     <section class="country-list">
-        <h4>{{ country.name }}</h4>
-        <p> {{ country.continent }} </p>
+        <hgroup>
+            <h2>{{ country.name }}</h2>
+            <p> {{ country.continent }} </p>
+        </hgroup>
         <form action="/destination/new/{{ country.id }}" method="GET">
-            <input type="submit" value="Add">
-        </form>
+             <input class="add-button-3" type="submit" value="Add">
+         </form>
     </section>
     {% endfor %}
-</section>
 </main>
 {% endblock %}
